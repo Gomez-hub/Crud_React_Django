@@ -71,3 +71,23 @@ export default App;
 .read-the-docs {
   color: #888;
 }
+
+
+
+
+
+
+/////////////////////////////////////////////77
+
+  useEffect(() => {
+           respuesta()                     
+        })
+     
+        
+        const respuesta= () =>{
+            fetch('tasks/api/v1/tasks/')
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(console.log('error')
+            )
+                } 
