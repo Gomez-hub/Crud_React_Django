@@ -1,0 +1,12 @@
+.estilo{
+    background-color: aqua;
+}
+
+th,
+td {
+  border: 1px solid rgb(111, 134, 95);
+  padding: 8px 10px;
+}
+td{
+    align-items: center;
+}

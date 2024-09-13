@@ -1,0 +1,73 @@
+/**/import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Navigation } from "./components/Navigation";
+import { TaskFormPage } from "./pages/TaskFormPage";
+import { TasksPage } from "./pages/TasksPage";
+import { Toaster } from "react-hot-toast";
+
+
+//esto son como las direcciones de paginas generadas por react
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div className="container mx-auto">
+        <Navigation />
+        <Routes>
+          {}
+          <Route path="/" element={<Navigate to="/tasks" />} />
+          <Route path="/tasks" element={<TasksPage />} />
+          <Route path="/tasks/:id" element={<TaskFormPage />} />
+          <Route path="/tasks-create" element={<TaskFormPage />} />
+        </Routes>
+        <Toaster />
+      </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+
+--------------------
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
